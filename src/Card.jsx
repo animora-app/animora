@@ -1,2 +1,0 @@
-import React from 'react';
-export default function Card({anime,onOpen,favorite,onFav}){return <article className="card"><button className="poster" onClick={()=>onOpen(anime)}><img src={anime.cover} alt="" loading="lazy"/>{anime.score>0&&<span>★ {anime.score}</span>}</button><div className="card-info"><button className="title" onClick={()=>onOpen(anime)}>{anime.title}</button><small>{anime.year||'—'} · {anime.type||'Anime'}</small>{onFav&&<button className="heart" onClick={e=>{e.stopPropagation();onFav(anime)}}>{favorite?'♥':'♡'}</button>}</div></article>}
